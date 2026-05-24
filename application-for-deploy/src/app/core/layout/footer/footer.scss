@@ -1,0 +1,25 @@
+:host {
+  min-height: var(--footer_height);
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1.5rem;
+  width: calc(100vw - 4.5rem);
+  min-height: var(--footer_height);
+  background: color-mix(in srgb, var(--tui-background-base), transparent 50%);
+  border: none;
+  border-top-right-radius: 2rem;
+  box-shadow: -1px 1px 20px 5px rgb(0 0 0 / 20%);
+
+  &__time-period {
+    color: var(--tui-text-02);
+  }
+}
+
+.text {
+  color: var(--tui-text-secondary);
+}

@@ -1,0 +1,41 @@
+:host {
+    min-height: var(--header_height);
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100 !important;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 4.5rem);
+    min-height: var(--header_height);
+    padding: 0rem 1.5rem;
+
+    
+    backdrop-filter: blur(1.25rem);
+    background: color-mix(in srgb, var(--tui-background-base), transparent 50%);
+    border: none;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 1px 1px 20px 12px rgba(0, 0, 0, 0.2);
+
+
+    &__logo {
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            text-decoration: none;
+            color: var(--tui-text-01);
+        }
+
+        span {
+
+            font: var(--tui-font-heading-5);
+        }
+    }
+}

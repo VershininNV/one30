@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --header_height: 4.5rem;
+    --footer_height: 4.5rem;
+}
+
+tui-root {
+    background: #FFFFFF !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(253, 241, 221, 1) 100%) !important;
+    border-image: none !important;
+}
+
+.t-root-content {
+    width: 100vw;
+    height: 100vh;
+}
+
+@for $i from 0 through 100 {
+    .w-#{$i} { width: #{$i}#{"%"} }
+}
+  
+@for $i from 0 through 100 {
+    .h-#{$i} { height: #{$i}#{"%"} }
+}
