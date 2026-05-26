@@ -1,0 +1,17 @@
+<button
+  iconStart="@tui.square-menu"
+  size="s"
+  topRight
+  tuiDropdownAuto
+  tuiIconButton
+  appearance="secondary"
+  type="button"
+  [tuiDropdown]="dropdown"
+></button>
+<ng-template #dropdown>
+  <tui-data-list size="s">
+    @for (section of sections; track section) {
+      <button tuiOption s type="button" (click)="scrollToSection(section.value)">{{section.name}}</button>
+    }
+  </tui-data-list>
+</ng-template>

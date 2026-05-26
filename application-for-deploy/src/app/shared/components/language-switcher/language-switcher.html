@@ -1,0 +1,44 @@
+<div tuiDropdownLimitWidth="fixed" tuiGroup [tuiDropdown]="dropdown" [(tuiDropdownOpen)]="open">
+  <button size="s" tuiButton appearance="outline" tuiAppearanceMode="checked" type="button">
+    <ng-container
+      [ngTemplateOutlet]="flag"
+      [ngTemplateOutletContext]="{ value: selected }"
+    ></ng-container>
+  </button>
+  <button
+    #tuiDropdownHost
+    size="s"
+    tuiChevron
+    tuiIconButton
+    appearance="outline"
+    tuiAppearanceMode="checked"
+    type="button"
+    [style.flex]="'0 0 auto'"
+  ></button>
+</div>
+<ng-template #dropdown>
+  <tui-data-list>
+    @for (language of languages; track language) {
+      <button tuiOption type="button" (click)="changeLanguage(language.value)">
+        <ng-container
+          [ngTemplateOutlet]="flag"
+          [ngTemplateOutletContext]="{ value: language.value }"
+        ></ng-container>
+      </button>
+    }
+  </tui-data-list>
+</ng-template>
+
+<ng-template #flag let-value="value">
+  @switch (value) {
+    @case ('russian') {
+      <span class="fi fi-ru"></span>
+    }
+    @case ('english') {
+      <span class="fi fi-us"></span>
+    }
+    @case ('spanish') {
+      <span class="fi fi-es"></span>
+    }
+  }
+</ng-template>
