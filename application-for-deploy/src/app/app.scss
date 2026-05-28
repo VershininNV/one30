@@ -3,11 +3,19 @@
     justify-content: center;
     min-height: calc(var(--tui-viewport-height) - (var(--header_height) + var(--footer_height)));
     
-
     &__view-port_width {
         width: 100%;
         overflow: hidden !important;
-        padding: 1.5rem 10rem 0rem;
+        padding: 1.5rem 10rem;
+    }
+
+    &__cards {
+        display: flex;
+        gap: 2rem;        
+    }
+
+    &__card {
+        width: calc(50% - 1rem);
     }
 }
   

@@ -4,12 +4,22 @@
   </header>
   <main class="content">
     <div class="content__view-port_width">
-      <router-outlet></router-outlet>
+
+      <div class="content__cards">
+        <div class="content__card">
+          <app-reviews></app-reviews>
+        </div>
+        <div class="content__card">
+          <app-gym></app-gym>
+        </div>
+      </div>
+      
+      <!-- <router-outlet></router-outlet> -->
     </div>
   </main>
   <footer class="footer">
     <app-footer></app-footer>
   </footer>
-
+  <app-cookies-banner></app-cookies-banner>
   <ng-container ngProjectAs="tuiOverContent"> </ng-container>
 </tui-root>

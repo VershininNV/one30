@@ -1,0 +1,21 @@
+@if ((isBannerShow$ | async)!) {
+  <div class="reminder__container">
+    <div class="reminder__content">
+      <div class="reminder__text">
+        Мы используем файлы cookie, чтобы сделать сайт удобнее. <br />Нажимая «Принять», вы
+        соглашаетесь с
+        <a target="_blank" [href]="'/'">условиями их обработки</a>
+      </div>
+      <button
+        appearance="outline-grayscale"
+        tuiAppearanceMode="checked invalid"
+        tuiButton
+        type="button"
+        size="m"
+        (click)="hideBanner()"
+      >
+        Принять
+      </button>
+    </div>
+  </div>
+}

@@ -1,0 +1,32 @@
+.reminder {
+    &__container {
+        position: fixed;
+        bottom: 2rem;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        z-index: 1000 !important;
+    }
+
+    &__content {
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.5rem;
+        background: color-mix(in srgb, var(--tui-background-base), transparent 15%);
+        padding: 0.5rem 1rem;
+        box-shadow: 0 0 8px #00000024;
+        z-index: 1000 !important;
+        gap: 1rem;
+    }
+
+    &__text {
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .reminder__content {
+        /* width: 90vw; */
+    }
+}
