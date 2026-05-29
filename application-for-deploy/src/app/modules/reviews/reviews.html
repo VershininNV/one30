@@ -1,5 +1,41 @@
 <div appearance="floating" tuiCardMedium class="reviews__container scale">
-  <h2 tuiTitle>Отзывы
-  </h2>
-  
+  <div class="reviews__title-container">
+    <div class="reviews__title-text">
+      <div appearance="custom" tuiBadge class="badge">
+        <tui-icon icon="@tui.message-square-heart" />
+        99+
+      </div>
+      <h2 tuiTitle>Отзывов Наших клиентов со всей страны</h2>
+    </div>
+    <ng-container [ngTemplateOutlet]="switcher"></ng-container>
+  </div>
+
+  @if (isMap) {
+    <app-map></app-map>
+  } @else {
+    <div class="reviews__comments">
+      <div class="reviews__card-list">
+          @for (card of cards; track card) {
+            <ng-container [ngTemplateOutlet]="cardTempalte"></ng-container>
+          }
+        </div>
+    </div>
+  }
 </div>
+
+<ng-template #switcher>
+  <form tuiGroup class="group" [collapsed]="true" [formGroup]="switchForm">
+    <label appearance="" tuiBlock="s">
+      <input formControlName="value" tuiBlock type="radio" value="map" />
+      <tui-icon icon="@tui.map" />
+    </label>
+    <label appearance="" tuiBlock="s">
+      <input formControlName="value" tuiBlock type="radio" value="comments" />
+      <tui-icon icon="@tui.messages-square" />
+    </label>
+  </form>
+</ng-template>
+
+<ng-template #cardTempalte>
+  <div class="reviews__card" [tuiSkeleton]="true"></div>
+</ng-template>

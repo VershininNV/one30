@@ -14,8 +14,8 @@
         gap: 2rem;        
     }
 
-    &__card {
-        width: calc(50% - 1rem);
+    &__card_fit {
+        flex: 1 1;
     }
 }
   

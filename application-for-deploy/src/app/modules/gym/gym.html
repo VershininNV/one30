@@ -1,30 +1,30 @@
-<div appearance="floating" tuiCard class="gym__container scale">
-  <h2 tuiTitle>
-    Наш зал
-    <span tuiSubtitle>Мы также предоставляем возможность снять зал в аренду</span>
-  </h2>
-
-  <tui-carousel class="gym__carousel" #carousel="tuiCarousel" [duration]="5000" [(index)]="index">
-     <section
-        *tuiItem="let index"
-        appearance="neutral"
-        tuiCard
-        class="gym__image"
-    >
+<div appearance="floating" tuiCardMedium class="gym__container scale">
+  <div class="gym__title-text">
+      <div appearance="custom" tuiBadge class="badge">
+        <tui-icon icon="@tui.message-square-heart" />
+      </div>
+      <h2 tuiTitle>Наш зал</h2>
+    </div>
+  <div class="gym__content">
+    <tui-carousel class="gym__carousel" #carousel="tuiCarousel" [duration]="5000" [(index)]="index">
+      <section *tuiItem="let index" appearance="neutral" tuiCard class="gym__image">
         @let current = images.at(index % images.length);
-        <img [src]="current">
-    </section>
-  </tui-carousel>
-  <!-- <tui-pager [count]="images.length" [index]="clamped()" [valueContent]="content" /> -->
-
-  <ng-template #content let-current>
-    <progress
-      max="100"
-      size="s"
-      tuiProgressBar
-      class="progress"
-      [class.progress_active]="clamped() === current"
-      [value]="clamped() === current && !isE2E ? carousel.progress() : 0"
-    ></progress>
-  </ng-template>
+        <img [src]="current" />
+      </section>
+    </tui-carousel>
+    <div class="gym__pager">
+      <tui-pager [count]="images.length" [index]="clamped()" [valueContent]="content" />
+    </div>
+  </div>
 </div>
+
+<ng-template #content let-current>
+  <progress
+    max="100"
+    size="s"
+    tuiProgressBar
+    class="progress"
+    [class.progress_active]="clamped() === current"
+    [value]="clamped() === current && !isE2E ? carousel.progress() : 0"
+  ></progress>
+</ng-template>

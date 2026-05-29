@@ -24,6 +24,25 @@
         transition: all 0.2s linear;
     }
 
+    &__content {
+        flex: 1 1;
+        flex-direction: column;
+        gap: 0.125rem;
+    }
+
+    &__title {
+        &-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
     &__carousel {
         width: 100%;
         border-radius: var(--tui-radius-l);
@@ -32,12 +51,40 @@
     &__image {
         width: 100%;
         aspect-ratio: 16 / 9;
+        overflow: hidden;
         transition: all 0.2s linear;
+
 
         img {
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
+
+    &__pager {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
+
+.progress {
+    transition: all 0.2s ease-in-out;
+ 
+    inline-size: 1rem;
+ 
+    &:not(&_active) {
+        inline-size: 0.5rem;
+        color: transparent;
+    }
+}
+
+.badge {
+    background: #aff218;
+    color: #333;
+}
+

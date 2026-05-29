@@ -5,10 +5,11 @@ import { Footer, Header } from "./core";
 import { CookiesBanner } from "./shared/components/cookies-banner/cookies-banner";
 import { Gym } from "./modules/gym/gym";
 import { Reviews } from "./modules/reviews/reviews";
+import { Disciplines } from "./modules/disciplines/disciplines";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TuiRoot, Header, Footer, CookiesBanner, Gym, Reviews],
+  imports: [RouterOutlet, TuiRoot, Header, Footer, CookiesBanner, Gym, Reviews, Disciplines],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

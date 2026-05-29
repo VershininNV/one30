@@ -1,0 +1,46 @@
+.disciplines {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 5rem;
+        padding: 0rem 15rem;
+    }
+
+    &__line {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+.scale {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    &:active {
+        transform: scale(0.99);
+    }
+}
+
+.box {
+    height: 20rem;
+    transition: all 0.5s linear !important;
+}
+
+.box-1 {
+    flex: 1.5;
+}
+
+.box-2 {
+    flex: 0.5;
+}
+
+.box-2:hover {
+    flex: 4.5;
+    
+}

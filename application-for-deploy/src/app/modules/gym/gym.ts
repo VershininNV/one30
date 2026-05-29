@@ -1,12 +1,11 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { TuiCard, TuiCardMedium, TuiSurface } from '@taiga-ui/layout';
-import { TuiCarousel, TuiTitle } from '@taiga-ui/core';
-import { TuiPager, TuiProgress } from '@taiga-ui/kit';
+import { TuiCarousel, TuiIcon, TuiTitle } from '@taiga-ui/core';
+import { TuiBadge, TuiPager, TuiProgress } from '@taiga-ui/kit';
 import { WA_IS_E2E } from '@ng-web-apis/platform';
 
 @Component({
   selector: 'app-gym',
-  imports: [TuiTitle, TuiCarousel, TuiPager, TuiProgress],
+  imports: [TuiTitle, TuiCarousel, TuiPager, TuiProgress, TuiBadge, TuiIcon],
   templateUrl: './gym.html',
   styleUrl: './gym.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
