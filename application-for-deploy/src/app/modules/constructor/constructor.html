@@ -1,0 +1,80 @@
+<div class="constructor__container">
+  <h1 class="constructor__title">конструктор постановки</h1>
+  <div tuiCardLarge="compact" [tuiCardCollapsed]="collapsed()">
+    <header tuiHeader="body-m">
+      <hgroup tuiTitle>
+        <p tuiSubtitle>Выберите необходимые Вам дисциплины</p>
+      </hgroup>
+    </header>
+    <section class="constructor__list">
+      <label appearance="outline-grayscale" tuiChip class="constructor__card constructor__card-hoop">
+        <input tuiCheckbox type="checkbox" [(ngModel)]="checked[0]" />
+        {{ names[0] }}
+      </label>
+      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-ball">
+        <input tuiCheckbox type="checkbox" [(ngModel)]="checked[1]" />
+        {{ names[1] }}
+      </label>
+      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-stripe">
+        <input tuiCheckbox type="checkbox" [(ngModel)]="checked[2]" />
+        {{ names[2] }}
+      </label>
+      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-mace">
+        <input tuiCheckbox type="checkbox" [(ngModel)]="checked[3]" />
+        {{ names[3] }}
+      </label>
+      <label appearance="outline-grayscale" tuiChip class="constructor__card">
+        <input tuiCheckbox type="checkbox" [(ngModel)]="checked[4]" />
+        {{ names[4] }}
+      </label>
+    </section>
+
+    <div tuiCardRow>
+      <header tuiHeader="body-m">
+        <hgroup tuiTitle>
+          <p tuiSubtitle>Вы также можете выбрать дополнительные опции</p>
+        </hgroup>
+      </header>
+      <button
+        appearance="secondary"
+        size="s"
+        tuiIconButton
+        type="button"
+        [tuiChevron]="!collapsed()"
+        (click)="collapsed.set(!collapsed())"
+      >
+        Expand
+      </button>
+    </div>
+    <tui-expand [expanded]="!collapsed()">
+      <form [formGroup]="form">
+        <div class="constructor__list">
+          <label appearance="outline-grayscale" tuiChip class="constructor__option">
+            <input size="s" tuiCheckbox type="checkbox" formControlName="musicSelect" />
+            подбор музыки
+            <div class="price">1500 ₽</div>
+          </label>
+          <label appearance="outline-grayscale" tuiChip class="constructor__option">
+            <input size="s" tuiCheckbox type="checkbox" formControlName="musicSelect" />
+            нарезка музыки
+            <div class="price">1500 ₽</div>
+          </label>
+          <label appearance="outline-grayscale" tuiChip class="constructor__option">
+            <input size="s" tuiCheckbox type="checkbox" formControlName="musicSelect" />
+            подсчет баллов
+            <div class="price">1500 ₽</div>
+          </label>
+          <label appearance="outline-grayscale" tuiChip class="constructor__option">
+            <input size="s" tuiCheckbox type="checkbox" formControlName="musicSelect" />
+            срочная постановка
+            <div class="price">1500 ₽</div>
+          </label>
+        </div>
+      </form>
+    </tui-expand>
+    <button tuiButton size="m" type="button" class="button">
+      <span tuiFade>Итоговая стоимость: </span>
+      <strong>{{ total() }} ₽</strong>
+    </button>
+  </div>
+</div>

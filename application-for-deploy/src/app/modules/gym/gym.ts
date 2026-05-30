@@ -15,11 +15,11 @@ export class Gym {
   protected readonly index = signal(0);
 
   protected readonly images = [
-    'assets/images/gym1.jpg',
-    'assets/images/gym2.jpg',
-    'assets/images/gym3.jpg',
-    'assets/images/gym4.jpg',
-    'assets/images/gym5.jpg',
+    'assets/images/gym6.jpeg',
+    'assets/images/gym7.jpeg',
+    'assets/images/gym8.jpeg',
+    'assets/images/gym9.jpeg',
+    'assets/images/gym10.jpeg',
   ];
 
   protected readonly clamped = computed(

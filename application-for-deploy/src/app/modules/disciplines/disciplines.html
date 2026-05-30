@@ -1,13 +1,134 @@
 <div class="disciplines__container">
+  <h1 class="disciplines__title">готовые постановки</h1>
   <div class="disciplines__line container">
-    <div appearance="floating" tuiCardMedium class="scale box box-1"></div>
-    <div appearance="floating" tuiCardMedium class="scale box box-2"></div>
+    <div appearance="floating" tuiCardMedium tuiSurface class="scale box box-1 box__image-hoop">
+      <div class="box__title-text">
+        <div appearance="custom" tuiBadge class="badge">
+          <tui-icon icon="@tui.circle" />
+          Обруч
+        </div>
+        <h2 tuiTitle></h2>
+      </div>
+      <div class="box__content">
+        <div
+          class="box__text"
+          [tuiSkeleton]="
+            skeleton
+              ? 'This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.'
+              : ''
+          "
+        >
+          {{ skeleton ? '' : 'This text will be replaced by a placeholder.' }}
+        </div>
+      </div>
+      <button appearance="primary" size="m" tuiButton type="button" class="box__button">
+        <tui-icon icon="@tui.shopping-basket" />
+        5000 ₽
+      </button>
+    </div>
+    <div appearance="floating" tuiCardMedium tuiSurface class="scale box box-2 box__image-ball">
+      <div class="box__title-text">
+        <div appearance="custom" tuiBadge class="badge">
+          <tui-icon icon="@tui.volleyball" />
+          Мяч
+        </div>
+        <h2 tuiTitle></h2>
+      </div>
+      <div class="box__content">
+        <div
+          class="box__text"
+          [tuiSkeleton]="
+            skeleton
+              ? 'This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.'
+              : ''
+          "
+        >
+          {{ skeleton ? '' : 'This text will be replaced by a placeholder.' }}
+        </div>
+      </div>
+      <button appearance="primary" size="m" tuiButton type="button" class="box__button">
+        <tui-icon icon="@tui.shopping-basket" />
+        5000 ₽
+      </button>
+    </div>
   </div>
   <div class="disciplines__line container">
-    <div appearance="floating" tuiCardMedium class="scale box box-2"></div>
-    <div appearance="floating" tuiCardMedium class="scale box box-1"></div>
+    <div appearance="floating" tuiCardMedium tuiSurface class="scale box box-2 box__image-stripe">
+      <div class="box__title-text">
+        <div appearance="custom" tuiBadge class="badge">
+          <tui-icon icon="@tui.ribbon" />
+          Лента
+        </div>
+        <h2 tuiTitle></h2>
+      </div>
+      <div class="box__content">
+        <div
+          class="box__text"
+          [tuiSkeleton]="
+            skeleton
+              ? 'This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.'
+              : ''
+          "
+        >
+          {{ skeleton ? '' : 'This text will be replaced by a placeholder.' }}
+        </div>
+      </div>
+      <button appearance="primary" size="m" tuiButton type="button" class="box__button">
+        <tui-icon icon="@tui.shopping-basket" />
+        5000 ₽
+      </button>
+    </div>
+    <div appearance="floating" tuiCardMedium tuiSurface class="scale box box-1 box__image-mace">
+      <div class="box__title-text">
+        <div appearance="custom" tuiBadge class="badge">
+          <tui-icon icon="@tui.line-dot-right-horizontal" />
+          Булавы
+        </div>
+        <h2 tuiTitle></h2>
+      </div>
+      <div class="box__content">
+        <div
+          class="box__text"
+          [tuiSkeleton]="
+            skeleton
+              ? 'This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.'
+              : ''
+          "
+        >
+          {{ skeleton ? '' : 'This text will be replaced by a placeholder.' }}
+        </div>
+      </div>
+      <button appearance="primary" size="m" tuiButton type="button" class="box__button">
+        <tui-icon icon="@tui.shopping-basket" />
+        5000 ₽
+      </button>
+    </div>
   </div>
   <div class="disciplines__line">
-    <div appearance="floating" tuiCardMedium class="scale "></div>
+    <div appearance="floating" tuiCardMedium tuiSurface class="scale box box-3 box__image-none">
+      <div class="box__title-text">
+        <div appearance="custom" tuiBadge class="badge">
+          <tui-icon icon="@tui.person-standing" />
+          Без предмета
+        </div>
+        <h2 tuiTitle></h2>
+      </div>
+      <div class="box__content">
+        <div
+          class="box__text"
+          [tuiSkeleton]="
+            skeleton
+              ? 'This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it. This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.This text serves as the content behind the skeleton and depending on its length, the skeleton will adjust to fit it.'
+              : ''
+          "
+        >
+          {{ skeleton ? '' : 'This text will be replaced by a placeholder.' }}
+        </div>
+      </div>
+      <button appearance="primary" size="m" tuiButton type="button" class="box__button">
+        <tui-icon icon="@tui.shopping-basket" />
+        5000 ₽
+      </button>
+    </div>
   </div>
 </div>

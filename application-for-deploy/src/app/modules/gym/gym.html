@@ -1,10 +1,11 @@
-<div appearance="floating" tuiCardMedium class="gym__container scale">
+<div class="container">
+  <h1 class="title">Наш зал</h1>
+  <div appearance="floating" tuiCardMedium class="gym__container scale">
   <div class="gym__title-text">
-      <div appearance="custom" tuiBadge class="badge">
-        <tui-icon icon="@tui.message-square-heart" />
-      </div>
-      <h2 tuiTitle>Наш зал</h2>
+    <div appearance="custom" tuiBadge class="badge">
+      <tui-icon icon="@tui.dumbbell" /> Много свободного места для творчества и будущих побед
     </div>
+  </div>
   <div class="gym__content">
     <tui-carousel class="gym__carousel" #carousel="tuiCarousel" [duration]="5000" [(index)]="index">
       <section *tuiItem="let index" appearance="neutral" tuiCard class="gym__image">
@@ -17,6 +18,9 @@
     </div>
   </div>
 </div>
+</div>
+
+
 
 <ng-template #content let-current>
   <progress

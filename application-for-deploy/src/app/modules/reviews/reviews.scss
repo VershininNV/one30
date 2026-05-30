@@ -4,10 +4,27 @@
             transform: scale(1.01);
         }
     }
- 
+
     &:active {
         transform: scale(0.99);
     }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+    padding: 0rem 20rem;
+    min-height: 31rem;
+}
+
+
+.title {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 3rem;
+        text-align: center;
 }
 
 .reviews {
@@ -23,6 +40,7 @@
         border-radius: var(--tui-radius-l);
         box-sizing: border-box;
         transition: all 0.2s linear;
+        align-items: center;
     }
 
     &__title {
@@ -43,7 +61,7 @@
 
     &__comments {
         flex: 1 1;
-        width: 46rem;
+        width: 100%;
     }
 
     &__card {
@@ -60,7 +78,7 @@
             height: 100%;
             overflow: scroll;
             overflow-y: hidden;
-            
+            min-height: 27.5rem;
         }
     }
 }
@@ -73,4 +91,3 @@
 .scrollbar {
     block-size: 100%;
 }
-

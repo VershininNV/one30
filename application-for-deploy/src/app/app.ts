@@ -6,10 +6,12 @@ import { CookiesBanner } from "./shared/components/cookies-banner/cookies-banner
 import { Gym } from "./modules/gym/gym";
 import { Reviews } from "./modules/reviews/reviews";
 import { Disciplines } from "./modules/disciplines/disciplines";
+import { Info } from "./modules/info/info";
+import { Constructor } from "./modules/constructor/constructor";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TuiRoot, Header, Footer, CookiesBanner, Gym, Reviews, Disciplines],
+  imports: [RouterOutlet, TuiRoot, Header, Footer, CookiesBanner, Gym, Reviews, Disciplines, Info, Constructor],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

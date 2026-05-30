@@ -1,10 +1,17 @@
 .disciplines {
+    &__title {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 3rem;
+        text-align: center;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        margin-bottom: 5rem;
-        padding: 0rem 15rem;
+        margin-top: 10rem;
+        padding: 0rem 20rem;
     }
 
     &__line {
@@ -30,6 +37,107 @@
 .box {
     height: 20rem;
     transition: all 0.5s linear !important;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+
+
+    &__content {
+        flex: 1 1;
+        flex-direction: column;
+        gap: 0.125rem;
+    }
+
+    &__text {
+        width: 50%;
+
+    }
+
+    &__button {
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.5rem;
+    }
+
+    &__title {
+        &-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
+    &__image {
+        &-ball {
+            &::after {
+                background: url('/assets/images/ball.png') top;
+                background-position: right bottom;
+                background-repeat: no-repeat;
+                background-size: 15rem;
+            }
+
+            &:hover::after {
+                transform: scale(1.15);
+            }
+        }
+
+        &-stripe {
+            &::after {
+                background: url('/assets/images/stripe.png') top;
+                background-position: right bottom;
+                background-repeat: no-repeat;
+                background-size: 17rem;
+            }
+
+            &:hover::after {
+                transform: scale(1.15);
+            }
+        }
+
+        &-none {
+            &::after {
+                background: url('/assets/images/none.png') top;
+                background-position: right -2.5rem bottom;
+                background-repeat: no-repeat;
+                background-size: 20rem;
+            }
+
+            &:hover::after {
+                transform: scale(1.15);
+            }
+        }
+
+        &-mace {
+            &::after {
+                background: url('/assets/images/mace.png') top;
+                background-position: right -3rem bottom -2.5rem;
+                background-repeat: no-repeat;
+                background-size: 22rem;
+            }
+
+            &:hover::after {
+                transform: scale(1.15);
+            }
+        }
+
+        &-hoop {
+            &::after {
+                background: url('/assets/images/hoop.png') top;
+                background-position: right -2.5rem bottom;
+                background-repeat: no-repeat;
+                background-size: 20rem;
+            }
+
+            &:hover::after {
+                transform: scale(1.15);
+            }
+        }
+    }
 }
 
 .box-1 {
@@ -38,9 +146,31 @@
 
 .box-2 {
     flex: 0.5;
+
+    .box__content {
+        .box__text {
+            display: none !important;
+        }
+    }
+
+
 }
 
 .box-2:hover {
     flex: 4.5;
-    
+
+    .box__content {
+        .box__text {
+            display: block !important;
+        }
+    }
+}
+
+.box-3 {
+    flex: 1.5;
+}
+
+.badge {
+    background: #aff218;
+    color: #333;
 }
