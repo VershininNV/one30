@@ -86,6 +86,12 @@
             }
         }
 
+        &-ball_prod {
+            &::after {
+                background: url('/one30/assets/images/ball.png') top;
+            }
+        }
+
         &-stripe {
             &::after {
                 background: url('/assets/images/stripe.png') top;
@@ -96,6 +102,12 @@
 
             &:hover::after {
                 transform: scale(1.15);
+            }
+        }
+
+        &-stripe_prod {
+            &::after {
+                background: url('/one30/assets/images/stripe.png') top;
             }
         }
 
@@ -112,6 +124,12 @@
             }
         }
 
+        &-none_prod {
+            &::after {
+                background: url('/one30/assets/images/none.png') top;
+            }
+        }
+
         &-mace {
             &::after {
                 background: url('/assets/images/mace.png') top;
@@ -125,6 +143,12 @@
             }
         }
 
+        &-mace_prod {
+            &::after {
+                background: url('/one30/assets/images/mace.png') top;
+            }
+        }
+
         &-hoop {
             &::after {
                 background: url('/assets/images/hoop.png') top;
@@ -135,6 +159,12 @@
 
             &:hover::after {
                 transform: scale(1.15);
+            }
+        }
+
+        &-hoop_prod {
+            &::after {
+                background: url('/one30/assets/images/hoop.png') top;
             }
         }
     }

@@ -3,6 +3,6 @@
     <h1>Время побеждать вместе</h1>
     <h1>1:30</h1>
   </div>
-  <div class="hoop-girl"></div>
-  <div class="stripe-girl"></div>
+  <div class="hoop-girl" [class.hoop-girl_prod]="!isDevMode"></div>
+  <div class="stripe-girl" [class.stripe-girl_prod]="!isDevMode"></div>
 </div>

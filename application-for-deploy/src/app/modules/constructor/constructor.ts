@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, isDevMode, signal } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TuiButton, TuiCheckbox, TuiExpand, TuiIcon, TuiLink, TuiTitle } from '@taiga-ui/core';
 import { TuiBadge, TuiChevron, TuiChip } from '@taiga-ui/kit';
@@ -16,6 +16,7 @@ export class Constructor {
 
   public readonly total = signal(5000);
 
+  protected readonly isDevMode = isDevMode()
   protected readonly checked = [false, false, false, false, false];
   protected readonly names = ['Обруч', 'Мяч', 'Лента', 'Булавы', 'Без предмета'];
 

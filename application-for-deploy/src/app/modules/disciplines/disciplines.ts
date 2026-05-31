@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, isDevMode } from '@angular/core';
 import { TuiButton, TuiIcon } from '@taiga-ui/core';
 import { TuiBadge, TuiSkeleton } from '@taiga-ui/kit';
 import { TuiCardMedium } from '@taiga-ui/layout';
@@ -12,4 +12,5 @@ import { TuiCardMedium } from '@taiga-ui/layout';
 })
 export class Disciplines {
   protected skeleton = true
+  protected readonly isDevMode = isDevMode()
 }

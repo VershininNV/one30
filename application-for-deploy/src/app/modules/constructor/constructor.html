@@ -7,19 +7,19 @@
       </hgroup>
     </header>
     <section class="constructor__list">
-      <label appearance="outline-grayscale" tuiChip class="constructor__card constructor__card-hoop">
+      <label appearance="outline-grayscale" tuiChip class="constructor__card constructor__card-hoop" [class.constructor__card-hoop_prod]="!isDevMode">
         <input tuiCheckbox type="checkbox" [(ngModel)]="checked[0]" />
         {{ names[0] }}
       </label>
-      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-ball">
+      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-ball" [class.constructor__card-ball_prod]="!isDevMode">
         <input tuiCheckbox type="checkbox" [(ngModel)]="checked[1]" />
         {{ names[1] }}
       </label>
-      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-stripe">
+      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-stripe" [class.constructor__card-stripe_prod]="!isDevMode">
         <input tuiCheckbox type="checkbox" [(ngModel)]="checked[2]" />
         {{ names[2] }}
       </label>
-      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-mace">
+      <label appearance="outline-grayscale" tuiChip class="constructor__card  constructor__card-mace" [class.constructor__card-mace_prod]="!isDevMode">
         <input tuiCheckbox type="checkbox" [(ngModel)]="checked[3]" />
         {{ names[3] }}
       </label>
