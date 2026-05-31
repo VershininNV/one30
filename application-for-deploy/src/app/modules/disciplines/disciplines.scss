@@ -89,6 +89,9 @@
         &-ball_prod {
             &::after {
                 background: url('/one30/assets/images/ball.png') top;
+                background-position: right bottom;
+                background-repeat: no-repeat;
+                background-size: 15rem;
             }
         }
 
@@ -108,6 +111,9 @@
         &-stripe_prod {
             &::after {
                 background: url('/one30/assets/images/stripe.png') top;
+                background-position: right bottom;
+                background-repeat: no-repeat;
+                background-size: 17rem;
             }
         }
 
@@ -127,6 +133,9 @@
         &-none_prod {
             &::after {
                 background: url('/one30/assets/images/none.png') top;
+                background-position: right -2.5rem bottom;
+                background-repeat: no-repeat;
+                background-size: 20rem;
             }
         }
 
@@ -146,6 +155,9 @@
         &-mace_prod {
             &::after {
                 background: url('/one30/assets/images/mace.png') top;
+                background-position: right -3rem bottom -2.5rem;
+                background-repeat: no-repeat;
+                background-size: 22rem;
             }
         }
 
@@ -165,6 +177,9 @@
         &-hoop_prod {
             &::after {
                 background: url('/one30/assets/images/hoop.png') top;
+                background-position: right -2.5rem bottom;
+                background-repeat: no-repeat;
+                background-size: 20rem;
             }
         }
     }
